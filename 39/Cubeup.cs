@@ -15,12 +15,9 @@ public class Cubeup : MonoBehaviour
     {
         
     }
-    void OnTriggerStay(Collider Player)
+    void OnTriggerEnter(Collider Player)
     {
-        //範囲にいるときにW押すと上に上がる
-       if (Input.GetKey(KeyCode.W))
-          {
-             transform.Translate(0f, 2f * Time.deltaTime, 0f);
-          }
+
+        Debug.Log("当たった");
     }
 }
