@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class AddRForce : MonoBehaviour
 {
-    [SerializeField] Vector3 force;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody>().AddRelativeForce(force);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.E))
+        {
+            Vector3 v3 = new Vector3(0, 10, 0);
+            GetComponent<Rigidbody>().AddForce(v3);
+
+        }
         
     }
 }

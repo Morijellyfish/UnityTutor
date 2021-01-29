@@ -15,9 +15,8 @@ public class Cubeup : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter(Collider Player)
+    void OnTriggerStay(Collider Player)
     {
-
-        Debug.Log("当たった");
+        Player.transform.Translate(0, 0.1f, 0);
     }
 }
